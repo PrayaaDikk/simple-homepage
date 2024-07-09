@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./src/script.js"></script>
+
+    <title>Simple Homepage</title>
+  </head>
+  <body class="font-poppins bg-secondary duration-300">
+    <!-- homepage icon -->
+    <header class="sm:px-7 py-8 flex items-center justify-between">
+      <img id="logo" class="img1" alt="alarado-logo" />
+
+      <!-- navigation -->
+      <ul
+        class="hidden items-center gap-x-[64px] lg:flex text-third font-semibold"
+      >
+        <li class="text-primary duration-300">About us</li>
+        <li>Product</li>
+        <li>Resource</li>
+        <li>Contact</li>
+      </ul>
+
+      <!-- hamburger menu -->
+      <svg
+        id="hamburger-menu"
+        class="stroke-primary size-7 lg:hidden lg:pointer-events-none"
+        viewBox="0 0 24.00 24.00"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></g>
+        <g id="SVGRepo_iconCarrier">
+          <path
+            d="M4 6H20M4 12H20M4 18H20"
+            stroke-width="2.4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+        </g>
+      </svg>
+
+      <!-- darkmode button -->
+      <button
+        id="darkmodeButton"
+        class="relative hidden lg:flex items-center justify-between w-[48px] h-[25px] bg-primary rounded-full px-[4.8px] before:absolute before:top-[2.5px] before:left-[25.5px] before:w-[20px] before:h-[20px] before:rounded-full before:bg-secondary duration-300 before:duration-300"
+      >
+        <svg
+          id="moon"
+          class="size-[15px] z-10 pointer-events-none duration-300 notActiveToggle"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M15 4C15.292 4 15.438 4 15.5781 4.04183C16.192 4.22522 16.4775 4.93111 16.1637 5.48976C16.0921 5.61719 15.8744 5.82779 15.4389 6.249C13.935 7.70352 13 9.74257 13 12C13 14.2574 13.935 16.2965 15.4389 17.751C15.8744 18.1722 16.0921 18.3828 16.1637 18.5102C16.4775 19.0689 16.192 19.7748 15.5781 19.9582C15.438 20 15.292 20 15 20V20C10.5817 20 7 16.4183 7 12C7 7.58172 10.5817 4 15 4V4Z"
+          />
+        </svg>
+        <svg
+          id="sun"
+          class="size-[15px] z-10 pointer-events-none duration-300 activeToggle"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 5V3" stroke-width="2" stroke-linecap="round" />
+          <path d="M12 21V19" stroke-width="2" stroke-linecap="round" />
+          <path
+            d="M16.9498 7.04996L18.364 5.63574"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <path
+            d="M5.63608 18.3644L7.05029 16.9502"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <path d="M19 12L21 12" stroke-width="2" stroke-linecap="round" />
+          <path d="M3 12L5 12" stroke-width="2" stroke-linecap="round" />
+          <path
+            d="M16.9498 16.95L18.364 18.3643"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <path
+            d="M5.63608 5.63559L7.05029 7.0498"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
+    </header>
+
+    <!-- mobile navigation -->
+    <aside
+      class="px-7 py-8 fixed z-10 top-0 -right-full duration-300 w-[60%] h-screen bg-white lg:hidden"
+      id="mobile-nav"
+    >
+      <div id="close" class="w-fit absolute right-0 mr-7">
+        <svg
+          class="activeToggle size-7 duration-300"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          stroke-width="1.464"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z"
+            ></path>
+          </g>
+        </svg>
+      </div>
+
+      <!-- mobile navigation menu-->
+      <ul
+        class="mt-12 w-fit mx-auto text-center text-third font-semibold *:my-5 *:text-[50px]"
+      >
+        <li class="text-primary duration-300">About us</li>
+        <li>Product</li>
+        <li>Resource</li>
+        <li>Contact</li>
+      </ul>
+
+      <!-- mobile darkmode button -->
+      <button
+        id="mobileDarkmodeButton"
+        class="mx-auto relative flex items-center justify-between w-[48px] h-[25px] bg-primary rounded-full px-[4.8px] before:absolute before:top-[2.5px] before:left-[25.5px] before:w-[20px] before:h-[20px] before:rounded-full before:bg-secondary duration-300 before:duration-300"
+      >
+        <svg
+          id="moon"
+          class="size-[15px] z-10 pointer-events-none duration-300 notActiveToggle"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M15 4C15.292 4 15.438 4 15.5781 4.04183C16.192 4.22522 16.4775 4.93111 16.1637 5.48976C16.0921 5.61719 15.8744 5.82779 15.4389 6.249C13.935 7.70352 13 9.74257 13 12C13 14.2574 13.935 16.2965 15.4389 17.751C15.8744 18.1722 16.0921 18.3828 16.1637 18.5102C16.4775 19.0689 16.192 19.7748 15.5781 19.9582C15.438 20 15.292 20 15 20V20C10.5817 20 7 16.4183 7 12C7 7.58172 10.5817 4 15 4V4Z"
+          />
+        </svg>
+        <svg
+          id="sun"
+          class="size-[15px] z-10 pointer-events-none duration-300 activeToggle"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 5V3" stroke-width="2" stroke-linecap="round" />
+          <path d="M12 21V19" stroke-width="2" stroke-linecap="round" />
+          <path
+            d="M16.9498 7.04996L18.364 5.63574"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <path
+            d="M5.63608 18.3644L7.05029 16.9502"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <path d="M19 12L21 12" stroke-width="2" stroke-linecap="round" />
+          <path d="M3 12L5 12" stroke-width="2" stroke-linecap="round" />
+          <path
+            d="M16.9498 16.95L18.364 18.3643"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <path
+            d="M5.63608 5.63559L7.05029 7.0498"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
+    </aside>
+
+    <!-- homepage section -->
+    <section class="py-16 xl:flex xl:flex-row-reverse xl:items-center">
+      <!-- homepage image -->
+      <div class="px-5 lg:w-[560px] lg:mx-auto xl:w-full xl:m-0">
+        <img src="./assets/hero-image-simple-homepage.png" />
+      </div>
+
+      <!-- homepage main -->
+      <main class="px-[72px] text-primary w-[95%] mt-16">
+        <p id="pDark" class="font-semibold uppercase text-[18px] duration-300">
+          😎 Simple way to communicate
+        </p>
+        <h1
+          id="h1Dark"
+          class="font-bold text-[60px] my-5 lg:w-[90%] duration-300"
+        >
+          Actions for Accessibility in Design
+        </h1>
+        <p class="text-third font-medium text-[18px] lg:w-[60%]xl:w-full">
+          The fastest way to build and deploy websites with resusable
+          components.
+        </p>
+
+        <!-- homepage button -->
+        <footer>
+          <div class="my-7 flex items-center gap-x-[68px]">
+            <button
+              class="px-[34px] py-3 rounded-lg bg-[#2A4DD0] font-medium text-base text-secondary"
+            >
+              Get Started
+            </button>
+            <a href="#" class="underline text-[#2a4dd0] font-semibold"
+              >Get live demo</a
+            >
+          </div>
+
+          <!-- done ring -->
+          <div
+            class="flex items-center text-[14px] font-medium text-third tracking-tight gap-x-[36px]"
+          >
+            <div class="flex items-center gap-x-[11px]">
+              <img src="./assets/Done_ring_round_fill.svg" />
+              <p>No credit card required</p>
+            </div>
+            <div class="flex items-center gap-x-[11px]">
+              <img src="./assets/Done_ring_round_fill.svg" />
+              <p>No software to install</p>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </section>
+  </body>
+</html>

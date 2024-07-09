@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.img1 {
+  content: url("../assets/alarado-icon-homepage.svg");
+}
+
+.img2 {
+  content: url("../assets/alarado-icon-homepage-dark.svg");
+}
+
+.mobileNavActive {
+  right: 0;
+}
+
+.darkToggleActive {
+  @apply before:left-[2.5px] before:-translate-x-[115%];
+}
+
+.activeToggle {
+  stroke: #223344;
+  fill: #223344;
+}
+
+.notActiveToggle {
+  stroke: #f2f9f3;
+  fill: #f2f9f3;
+}
+
+.darkActive {
+  @apply text-secondary;
+}
